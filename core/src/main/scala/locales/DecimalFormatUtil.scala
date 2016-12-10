@@ -207,7 +207,7 @@ object DecimalFormatUtil {
           if (maxInt > minInt && maxInt > 1)
         } yield (1)
 
-      exponentMin orElse count
+      exponentMin orElse count orElse (if (maxIntegerDigits.isDefined) Some(1) else None)
     }
 
     val groupSize: Int = groupingCount(patterns.positive.pattern)

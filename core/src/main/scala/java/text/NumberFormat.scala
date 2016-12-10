@@ -10,7 +10,7 @@ abstract class NumberFormat protected () extends Format {
   private[this] var parseIntegerOnly: Boolean = false
   private[this] var roundingMode: RoundingMode = RoundingMode.HALF_EVEN
 
-  override def parseObject(source: String, pos: ParsePosition): AnyRef
+  //override def parseObject(source: String, pos: ParsePosition): AnyRef
 
   override def format(obj: AnyRef, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer = {
     obj match {
